@@ -1,0 +1,38 @@
+{
+  "seeker": {
+    "desiredJobTitle": "Software Engineer",
+    "desiredIndustry": "Technology",
+    "desiredLocation": "Fayetteville, NC",
+    "educationLevel": "Bachelors",
+    "qualifications": "Bachelor's Degree in Computer Science",
+    "skills": "Java, Python, C++",
+    "remotePreference": true,
+    "minPayExpectation": 100000.0
+  },
+  "jobs": [
+    {
+      "title": "Software Engineer",
+      "company": "Walt Disney World",
+      "industry": "Technology",
+      "location": "Orlando, FL",
+      "educationLevel": "Bachelors",
+      "qualifications": "Bachelor's Degree in Computer Science",
+      "requirements": "Java, Python, C++",
+      "description": "Develop and maintain software applications for the theme park.",
+      "remote": true,
+      "minPay": 70000.0
+    },
+    {
+      "title": "Algorithm Developer",
+      "company": "Google",
+      "industry": "Technology",
+      "location": "Mountain View, CA",
+      "educationLevel": "Masters",
+      "qualifications": "Master's Degree in Computer Science",
+      "requirements": "Python, Machine Learning, Data Structures",
+      "description": "Design and implement algorithms for search and recommendation systems.",
+      "remote": false,
+      "minPay": 120000.0
+    }
+  ]
+}

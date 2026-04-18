@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html[data-text-size='default'] {
+  font-size: 16px;
+}
+
+html[data-text-size='large'] {
+  font-size: 18px;
+}
+
+html[data-text-size='x-large'] {
+  font-size: 20px;
+}
+
+html[data-reduced-motion='true'] *,
+html[data-reduced-motion='true'] *::before,
+html[data-reduced-motion='true'] *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+html[data-high-contrast='true'] body {
+  background: #fffef5;
+  color: #000000;
+}
+
+html[data-high-contrast='true'] input,
+html[data-high-contrast='true'] textarea,
+html[data-high-contrast='true'] select,
+html[data-high-contrast='true'] button {
+  border-width: 3px !important;
+}
+
+html[data-color-safe='true'] {
+  filter: saturate(0.9) contrast(1.05);
+}

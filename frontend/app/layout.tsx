@@ -1,0 +1,37 @@
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import { AccessibilityProvider } from './components/accessibilityProvider';
+import './globals.css';
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+export const metadata: Metadata = {
+  title: 'Renaissance',
+  description: 'A modern job board designed for the needs of today’s job seekers and recruiters.',
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang='en' data-scroll-behavior="smooth">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <AccessibilityProvider>
+          {children}
+        </AccessibilityProvider>
+      </body>
+    </html>
+  );
+}
