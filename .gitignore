@@ -54,8 +54,12 @@ pnpm-debug.log*
 
 # Secrets / service accounts
 *.pem
-backend/serviceAccountKey.json
+backend/renaissanceServiceAccountKey.json
 backend/config/*firebase-adminsdk*.json
 
 # Vercel
 .vercel/
+
+# Java
+*.class
+java_engine/rankAndSort/lib/
