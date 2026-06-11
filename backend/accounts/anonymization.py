@@ -79,7 +79,6 @@ def sanitize_text(text: str) -> str:
 
     sanitized = text
 
-    # Convert date ranges first
     sanitized = replace_date_ranges(sanitized)
 
     sanitized = EMAIL_PATTERN.sub('[redacted email]', sanitized)

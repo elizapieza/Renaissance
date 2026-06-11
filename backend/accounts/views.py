@@ -411,7 +411,6 @@ def onboarding_recruiter(request):
             recruiter_profile.company = company_obj
             recruiter_profile.profile_completed = True
 
-            # Only keep this line if recruiterProfile model has a bio field
             if hasattr(recruiter_profile, 'bio'):
                 recruiter_profile.bio = bio or ''
 
