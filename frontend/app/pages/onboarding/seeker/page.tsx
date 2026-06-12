@@ -204,7 +204,6 @@ export default function SeekerOnboardingPage() {
     return (
         <ProtectedRoute
             allowedRoles={['seeker']}
-            redirectIfProfileComplete={true}
             redirectCompletedProfileTo="/pages/dashboard/seeker"
             redirectWrongRoleTo="/pages/dashboard"
         >

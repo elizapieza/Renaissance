@@ -1,10 +1,10 @@
 "use client";
 
 import PageShell from '@/app/components/PageShell';
-import ProtectedRoute from '@/app/components/protectedRoutes';
 import { auth } from '@/app/lib/firebase';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import ProtectedRoute from '@/app/components/protectedRoutes';
 
 export default function RecruiterOnboardingPage() {
     const router = useRouter();
@@ -99,6 +99,8 @@ export default function RecruiterOnboardingPage() {
             }
 
             const idToken = await user.getIdToken();
+            const requestedRole = isOwner ? 'owner' : 'recruiter';
+
 
             const response = await fetch("http://127.0.0.1:8000/api/accounts/company/confirm-ownership/", {
                 method: 'POST',
@@ -109,6 +111,7 @@ export default function RecruiterOnboardingPage() {
                     idToken,
                     companyId: createdCompanyId,
                     isOwner,
+                    requestedRole
                 }),
             });
 
@@ -122,7 +125,7 @@ export default function RecruiterOnboardingPage() {
             setShowOwnerPopup(false);
 
             if (isOwner) {
-                router.push('/company');
+                router.push('/pages/onboarding/company');
             } else {
                 router.push('/pages/dashboard/recruiter');
             }
@@ -138,9 +141,8 @@ export default function RecruiterOnboardingPage() {
     return (
         <ProtectedRoute
             allowedRoles={['recruiter']}
-            redirectIfProfileComplete={true}
-            redirectCompletedProfileTo="/pages/dashboard/recruiter"
-            redirectWrongRoleTo="/pages/dashboard"
+            redirectSignedOutTo="/pages/landing"
+            requireProfileComplete={false}
         >
             <PageShell
                 navBarVariant="recruiter"

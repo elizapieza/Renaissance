@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { useRouter } from 'next/navigation';
 import { auth } from '@/app/lib/firebase';
 import { CurrentAccount, getCurrentAccount } from '@/app/lib/getCurrentAccount';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+
 
 type ProtectedRouteProps = {
     children: React.ReactNode;
@@ -29,6 +30,7 @@ export default function ProtectedRoute({
     redirectIncompleteProfileTo,
     redirectCompletedProfileTo = '/pages/dashboard',
 }: ProtectedRouteProps) {
+
     const router = useRouter();
 
     const [checkingAuth, setCheckingAuth] = useState(true);

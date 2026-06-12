@@ -44,7 +44,7 @@ export default function PostAJobPage() {
 
             const idToken = await user.getIdToken();
 
-            const response = await fetch('http://127.0.0.1:8000/api/jobs/create/', {
+            const response = await fetch('http://127.0.0.1:8000/api/jobs/createJob/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -120,6 +120,7 @@ export default function PostAJobPage() {
                             type="text"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
+                            placeholder="Example: Software Engineer"
                             className="w-full rounded border border-gray-300 bg-white p-2"
                         />
                     </div>
@@ -133,6 +134,7 @@ export default function PostAJobPage() {
                             type="text"
                             value={industry}
                             onChange={(e) => setIndustry(e.target.value)}
+                            placeholder="Example: Technology"
                             className="w-full rounded border border-gray-300 bg-white p-2"
                         />
                     </div>
@@ -146,6 +148,7 @@ export default function PostAJobPage() {
                             type="text"
                             value={location}
                             onChange={(e) => setLocation(e.target.value)}
+                            placeholder="Example: New York, NY"
                             className="w-full rounded border border-gray-300 bg-white p-2"
                         />
                     </div>
