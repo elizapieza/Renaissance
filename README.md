@@ -15,45 +15,34 @@ Research suggests that unconscious bias can influence hiring decisions before me
 - Candidate information is anonymized.
 - Recruiters evaluate candidates based on qualifications first.
 - Identity is revealed only after mutual interest is established.
------------------------------------------------------------------------
+
 The goal is not to eliminate bias entirely, but to encourage qualification-first evaluation.
 
 ## Architecture
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](docs/images/architecture.png)
 
 - Renaissance uses a Next.js frontend, Django backend, PostgreSQL database, Firebase Authentication, and a Java-based ranking engine.
 
 ## Screenshots
 
-### Candidate Review
-![Candidate Review](docs/images/candidate-review.png)
-
-- Recruiters review anonymized candidate profiles before identifying information is revealed.
-
 ### Job Posting
 
-![Job Posting](<job post 1.png>)
+![Job Posting](<docs/images/jobPost1.png>)
 
 - Recruiters create structured job listings including education requirements, qualifications, salary ranges, and job descriptions.
 
 ### Recruiter Dashboard
 
-![Recruiter Dashboard](<recruiter dashboard1.png>)
+![Recruiter Dashboard](<docs/images/recruiter dashboard1.png>)
 
 - Centralized dashboard for managing job postings, applicant rankings, and candidate interactions.
 
 ### Job Selection
 
-![Job Selection](swipe.png)
+![Job Selection](docs/images/swipe.png)
 
 - Recruiters can select active job listings and review ranked candidates for each position.
-
-### Swipe Based Interface
-
-![Swipe Interface](swipe1.png)
-
-- Both Recruiters and seekers can utilize a swipe based interface instead of a traditional layout.
 
 ## System Capabilities
 
